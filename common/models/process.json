@@ -1,0 +1,31 @@
+{
+  "name": "Process",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "Process name"
+    },
+    "definition": {
+      "type": "any",
+      "comments": "Process definition"
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": false,
+      "index": true,
+      "comments": "Process Id"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
