@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  x-ibm-name: process
+  title: Process
+  version: 1.0.0
+schemes:
+  - https
+host: $(catalog.host)
+basePath: /process
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+security:
+  - clientIdHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(target-url)$(request.path)
+  gateway: micro-gateway
+paths: {}
+definitions: {}
+tags: []
